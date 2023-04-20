@@ -11,4 +11,4 @@ A_y = float(input('Введите координату y точки А: '))
 B_x = float(input('Введите координату x точки B: '))
 B_y = float(input('Введите координату y точки B: '))
 
-print(f"{round(math.sqrt((A_x - B_x)**2 + (A_y - B_y)**2), 2)}")
+print(f"A ({round(A_x)}, {round(A_y)}); B ({round(B_x)}, {round(B_y)}) -> {round(math.sqrt((A_x - B_x)**2 + (A_y - B_y)**2), 2)}")

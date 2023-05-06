@@ -17,5 +17,8 @@ def answers():
         for key, value in phrases.items():
             if key == field.lower():
                 return(value)
+            else:
+                print('Такой команды я пока не знаю!')
+                break
             
 print(answers())

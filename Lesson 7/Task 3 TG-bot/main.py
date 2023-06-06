@@ -76,7 +76,7 @@ def process_find(message, number, count):
             c = count + 1
             bot.register_next_step_handler(msg, process_find, number, c)
         else: 
-            c = count + 1
+            c = count
             bot.reply_to(message, f'Вы отгадали число за {c} раз!\nЕсли хочешь сыграть ещё раз, запусти игру командой /start.')
             return
     except Exception as e:

@@ -45,7 +45,7 @@ def process_is_digits(message, number, count):
             bot.register_next_step_handler(msg, process_find, number, c)
         else: 
             c = count
-            bot.reply_to(message, f'Вы отгадали число за {c} раз!')
+            bot.reply_to(message, f'Вы отгадали число за {c} раз!\nЕсли хочешь сыграть ещё раз, запусти игру командой /start.')
             return
             # msg = bot.reply_to(message, 'Всё.\nЕсли хочешь сыграть ещё раз, запусти игру командой /start.')
     except Exception as e:
@@ -77,7 +77,7 @@ def process_find(message, number, count):
             bot.register_next_step_handler(msg, process_find, number, c)
         else: 
             c = count + 1
-            bot.reply_to(message, f'Вы отгадали число за {c} раз!')
+            bot.reply_to(message, f'Вы отгадали число за {c} раз!\nЕсли хочешь сыграть ещё раз, запусти игру командой /start.')
             return
     except Exception as e:
         bot.reply_to(message, f'Что-то пошло не так. Перезапусте бот командой /start.\nОшибка: {e}')
